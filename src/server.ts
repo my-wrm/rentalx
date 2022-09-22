@@ -1,12 +1,10 @@
 import express, { json } from "express";
+import { categoriesRoutes } from "./routes/categories.routes";
 
 const app = express();
+
 app.use(json());
 
-app.get("/", (req, res) => {
-  const { name } = req.body;
-
-  res.send(name);
-});
+app.use("/categories", categoriesRoutes);
 
 app.listen(3333);
