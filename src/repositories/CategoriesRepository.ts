@@ -27,6 +27,14 @@ class CategoriesRepository {
   getAll(): Category[] {
     return this.categories;
   }
+
+  findByName(name: string): Category {
+    const categoryByName = this.categories.find(
+      (category) => category.name === name
+    );
+
+    return categoryByName;
+  }
 }
 
 export { CategoriesRepository };
