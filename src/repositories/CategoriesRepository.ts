@@ -24,7 +24,7 @@ class CategoriesRepository {
     this.categories.push(category);
   }
 
-  getAll(): Category[] {
+  findAll(): Category[] {
     return this.categories;
   }
 
