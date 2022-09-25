@@ -4,7 +4,7 @@ import { CreateSpecificationUseCase } from "./create-specification-usecase";
 class CreateSpecificationController {
   constructor(private createSpecificationUseCase: CreateSpecificationUseCase) {}
 
-  handle(request: Request, response: Response) {
+  handle(request: Request, response: Response): Response {
     const { name, description } = request.body;
     this.createSpecificationUseCase.execute({
       description,
