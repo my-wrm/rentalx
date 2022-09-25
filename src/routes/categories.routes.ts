@@ -5,6 +5,7 @@ import {
   createCategoryController,
   listCategoriesController,
 } from "../modules/cars/usecases";
+import { importCategoryController } from "../modules/cars/usecases/import-category";
 
 const categoriesRoutes = Router();
 
@@ -21,13 +22,7 @@ categoriesRoutes.get("/", (request, response) => {
 });
 
 categoriesRoutes.post("/import", upload.single("file"), (request, response) => {
-  const { file } = request;
-  console.log(
-    "🚀 ~ file: categories.routes.ts ~ line 25 ~ categoriesRoutes.post ~ file",
-    file
-  );
-
-  return response.send();
+  return importCategoryController.handle(request, response);
 });
 
 export { categoriesRoutes };
