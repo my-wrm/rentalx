@@ -4,7 +4,7 @@ import {
   ISpecificationRepository,
 } from "./interfaces/ISpecificationRepository";
 
-class SpecificationsRepository implements ISpecificationRepository {
+class SpecificationRepository implements ISpecificationRepository {
   private specifications: Specification[];
 
   constructor() {
@@ -35,4 +35,4 @@ class SpecificationsRepository implements ISpecificationRepository {
   }
 }
 
-export { SpecificationsRepository };
+export { SpecificationRepository };
