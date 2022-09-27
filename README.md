@@ -2,5 +2,10 @@
 
 É uma API de aluguel de carros, que está sendo desenvolvida ao longo do meu aprendizado de NodeJS no bootcamp Ignite da Rocketseat.
 
-Utilizando princípios do SOLID e de Clean Arch.
-Lidando com envio de arquivos, leitura, e gravação dos mesmos.
+Conteúdos abordados até agora:
+
+<li>Solid</li>
+<li>Clean Arch</li>
+<li>CSV Read</li>
+<li>Swagger</li>
+<li>Docker</li>
