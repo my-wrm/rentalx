@@ -10,7 +10,7 @@ class ListCategoriesUsecase {
   ) {}
 
   async execute(): Promise<Category[]> {
-    const categories = this.categoriesRepository.findAll();
+    const categories = await this.categoriesRepository.findAll();
     return categories;
   }
 }
