@@ -3,14 +3,14 @@ import { container } from "tsyringe";
 import { CreateSpecificationUsecase } from "./create-specification-usecase";
 
 class CreateSpecificationController {
-  handle(request: Request, response: Response): Response {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { name, description } = request.body;
 
     const createSpecificationUsecase = container.resolve(
       CreateSpecificationUsecase
     );
 
-    createSpecificationUsecase.execute({
+    await createSpecificationUsecase.execute({
       description,
       name,
     });
