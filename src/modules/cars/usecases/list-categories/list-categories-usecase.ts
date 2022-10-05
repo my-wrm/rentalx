@@ -1,7 +1,7 @@
 import { Category } from "../../entities/category";
 import { ICategoryRepository } from "../../repositories/implementations/ICategoriesRepository";
 
-class ListCategoriesUseCase {
+class ListCategoriesUsecase {
   constructor(private categoriesRepository: ICategoryRepository) {}
 
   async execute(): Promise<Category[]> {
@@ -10,4 +10,4 @@ class ListCategoriesUseCase {
   }
 }
 
-export { ListCategoriesUseCase };
+export { ListCategoriesUsecase };
